@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;700&family=Fredoka+One&family=Ubuntu&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #e5e7eb;
+	font-family: 'Fredoka One', cursive;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.contrals {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 40px;
+}
+
+.btn {
+	width: 100px;
+	height: 50px;
+	font-family: 'Fredoka One', cursive;
+	cursor: pointer;
+	box-shadow: 10px 5px 5px grey;
+	border-radius: 5px;
+}
+
+.btn:hover {
+	background-color: aquamarine;
+}
+
+.btn:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px)
+}
+
+section{
+	display: grid;
+	grid-template-columns: repeat(4, 8rem);
+	grid-template-rows: repeat(4, 8rem);
+	grid-gap: 20px;
+	/* For the preseve-3d to work you need to add a perspostive  */
+	perspective: 800px;
+	margin-top: 30px;
+}
+
+.card {
+	position: relative;
+	/* Flipping the card */
+	transform-style: preserve-3d;
+	transition: all 0.5s cubic-bezier(.17,.67,.87,.21);
+	box-shadow: black 0px 5px 15px;
+	cursor: pointer;
+	
+}
+.face, .back {
+	/* This is relative to the card position */
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	/* This is never a tagert of pointer event  */
+	pointer-events: none;
+	
+}
+
+.back {
+	background-color: white;
+	backface-visibility: hidden;
+}
+
+.toggleCard {
+	transform: rotateY(180deg);
+}
+.text {
+	color: black;
+	font-weight: 800;
+	font-size: 3rem;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.board {
+	position: absolute;
+    text-align: center;
+    background: #FDF8E6;
+	width: 450px;
+	height: 450px;
+	border-radius: 10px;
+    /* transform: rotateY(180deg) rotateZ(50deg); */
+}
+
+.board-title {
+	padding: 100px;
+
+}
+.board-message {
+	font-size: 25px;
+}
+
+
+.hidden {
+	display: none;
+}
