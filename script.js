@@ -181,4 +181,3 @@ reset.onclick = onRestart;
 
 cardGenerator();
 
-// minute 52
