@@ -9,7 +9,6 @@
 body {
 	background-color: #e5e7eb;
 	font-family: 'Fredoka One', cursive;
-	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -22,6 +21,8 @@ body {
 	justify-content: center;
 	flex-direction: row;
 	gap: 40px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .btn {
